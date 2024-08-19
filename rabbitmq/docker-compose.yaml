@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  rabbit_service:
+    container_name: rabbit_mq
+    image: rabbitmq:3.12.13-management 
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=12345
+    ports:
+      - 8080:5672
+      - 9090:15672
